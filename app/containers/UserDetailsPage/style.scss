@@ -1,0 +1,74 @@
+.details-page {
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+  }
+
+  ul {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding-left: 1.75em;
+
+    li {
+      margin: 1em 0;
+
+      p.title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+$color-border: #cdcdcd;
+$color-label: darken($color-border, 20%);
+$color-primary: #1695a3;
+
+.field {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+  color: $color-label;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input:not([type]) {
+  appearance: none;
+  border: 1px solid $color-border;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.nav-bar {
+  text-align: left;
+}
+
+.router-link {
+  display: inline-flex;
+  padding: 0.25em 2em;
+  margin: 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #41addd;
+  color: #41addd;
+
+  &:active {
+    background: #41addd;
+    color: #fff;
+  }
+}

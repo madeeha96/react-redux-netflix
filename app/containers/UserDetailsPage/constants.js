@@ -1,0 +1,3 @@
+export const FETCH_USER = "[USER] SET USER";
+export const SET_USER_ACTIVE = "[USER] SET USER ACTIVE";
+export const UNSELECT_ACTIVE_USER = "[USER] UNSELECT ACTIVE USER";
