@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
 import ReactTable from "react-table";
 import { get } from "lodash";
 import "./style.scss";
@@ -24,7 +23,7 @@ export default class HomePage extends React.PureComponent {
     this.props.onFetchUserList();
   }
 
-  toggleSelection = (key, shift, row) => {
+  toggleSelection = key => {
     let selection = [...this.state.selection];
     const keyIndex = selection.indexOf(key);
     if (keyIndex >= 0) {
@@ -82,10 +81,6 @@ export default class HomePage extends React.PureComponent {
 
     return (
       <article>
-        <Helmet>
-          <title>User List</title>
-          <meta name="description" content="User list of Netflix Subscribers" />
-        </Helmet>
         <CheckboxTable
           ref={r => (this.checkboxTable = r)}
           data={this.props.users}

@@ -1,10 +1,4 @@
-/*
- * FeaturePage
- *
- * List all the features
- */
 import React from "react";
-import { Helmet } from "react-helmet";
 import "./style.scss";
 
 export default class FeaturePage extends React.Component {
@@ -15,13 +9,6 @@ export default class FeaturePage extends React.Component {
   render() {
     return (
       <div className="feature-page">
-        <Helmet>
-          <title>Feature Page</title>
-          <meta
-            name="description"
-            content="Feature page of React.js Boilerplate application"
-          />
-        </Helmet>
         <h1>Written Questions</h1>
         <ul>
           <li>

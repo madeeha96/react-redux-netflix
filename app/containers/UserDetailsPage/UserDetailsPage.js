@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { isEqual, get } from "lodash";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -38,7 +37,6 @@ export default class UserDetailsPage extends React.Component {
   };
 
   handleInputChange = event => {
-    
     if (this.state.isActive) {
       this.props.unselectUser([this.state.selectedUser._id]);
       this.setState({ isActive: false });
@@ -46,18 +44,11 @@ export default class UserDetailsPage extends React.Component {
       this.props.setUserActive(this.state.selectedUser._id);
       this.setState({ isActive: true });
     }
-   
   };
   render() {
     const { selectedUser } = this.state;
     return (
       <div className="details-page">
-        <Helmet>
-          <title>
-            {get(this.state, "selectedUser.name", "User Not Found")} Details
-          </title>
-          <meta name="details" content="User Details Page" />
-        </Helmet>
         <h1>Details</h1>
         <form>
           <label className="label">
